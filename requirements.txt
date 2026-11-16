@@ -1,0 +1,24 @@
+# Nothing But Net - Python 3.12
+# Install:  python -m pip install -r requirements.txt
+# NOTE: install PyTorch with GPU support separately FIRST (see README / pytorch.org),
+#       otherwise pip may install the CPU-only build.
+
+# --- Data loading & cleaning ---
+pandas
+numpy
+pyarrow          # Parquet support for pandas
+duckdb           # convert/query huge CSVs without loading into RAM
+
+# --- Data sources ---
+nba_api          # box scores, schedules
+requests         # GDELT news + SportsGameOdds API calls
+requests-oauthlib  # Yahoo Fantasy API (OAuth)
+
+# --- Modeling ---
+torch            # LSTM + probabilistic head (install CUDA build first, see note above)
+transformers     # DistilBERT
+scikit-learn     # StandardScaler, metrics, baseline linear regression
+
+# --- Evaluation & plots ---
+matplotlib
+tqdm             # progress bars for long loops
